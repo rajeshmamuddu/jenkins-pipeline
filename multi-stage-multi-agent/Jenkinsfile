@@ -22,11 +22,8 @@ pipeline {
         docker { image 'pengbai/docker-supermario' }
       }
       steps {
-        script {
-                  // Your deployment steps here
-                  sh 'docker run -p 8600:8080 -d rajesh4851/pengbai/docker-supermario:latest'
-              }
+        sh 'sh 'docker run -p 8600:8080 -d your-registry/your-image-name'
+      }
     }
-
   }
 }
