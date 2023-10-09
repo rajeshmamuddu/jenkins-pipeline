@@ -1,5 +1,4 @@
 pipeline {
-    
     agent any 
     
     environment {
@@ -11,7 +10,6 @@ pipeline {
         stage('Checkout'){
            steps {
                 url: 'https://github.com/rajeshmamuddu/jenkins-pipeline/python-jenkins-argocd-k8s',
-                branch: 'main'
            }
         }
 
