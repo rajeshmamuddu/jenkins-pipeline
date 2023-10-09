@@ -9,12 +9,12 @@ pipeline {
         sh 'mvn --version'
       }
     }
-    stage('Front-end') {
+    stage('build') {
       agent {
-        docker { image 'python:3.11.6-alpine3.18' }
+        docker { image 'pengbai/docker-supermario' }
       }
       steps {
-        sh 'python --version'
+        sh 'docker pull pengbai/docker-supermario'
       }
     }
   }
