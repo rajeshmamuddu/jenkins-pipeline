@@ -14,7 +14,7 @@ pipeline {
         docker { image 'pengbai/docker-supermario' }
       }
       steps {
-        sh 'docker pull pengbai/docker-supermario'
+        sh 'docker images'
       }
     }
   }
