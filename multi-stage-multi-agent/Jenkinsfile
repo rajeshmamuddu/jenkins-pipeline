@@ -17,5 +17,16 @@ pipeline {
         sh 'echo penguin image'
       }
     }
+    stage('deploy') {
+      agent {
+        docker { image 'pengbai/docker-supermario' }
+      }
+      steps {
+        script {
+                  // Your deployment steps here
+                  sh 'docker run -p 8600:8080 -d rajesh4851/pengbai/docker-supermario:latest'
+              }
+    }
+
   }
 }
