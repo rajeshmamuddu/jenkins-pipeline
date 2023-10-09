@@ -22,7 +22,7 @@ pipeline {
         docker { image 'pengbai/docker-supermario' }
       }
       steps {
-        sh 'docker run -p 8600:8080 -d rajesh4851/pengbai/docker-supermario:latest'
+        sh 'echo hello rajesh'
       }
     }
   }
