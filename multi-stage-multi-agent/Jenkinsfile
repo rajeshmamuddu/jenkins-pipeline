@@ -11,10 +11,10 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'node:16-alpine' }
+        docker { image 'python:3.11.6-alpine3.18' }
       }
       steps {
-        sh 'node --version'
+        sh 'python -version'
       }
     }
   }
