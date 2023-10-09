@@ -1,20 +1,9 @@
 pipeline {
-  agent 
+  agent any
   stages {
     stage('build') {
         steps {
         sh 'mvn clean install package'
-      }
-      }
-      steps {
-        sh 'echo penguin image'
-      }
-    stage('deploy') {
-      agent {
-        docker { image 'pengbai/docker-supermario' }
-      }
-      steps {
-        sh 'echo hello rajesh'
       }
     }
   }
