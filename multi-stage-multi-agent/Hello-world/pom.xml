@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from version control
+                checkout scm
+            }
+        }
+
+        stage('Build with Maven') {
+            steps {
+                // Use Maven to build the project
+                script {
+                    def mavenHome = tool 'Maven' // Assumes "Maven" is configured in Jenkins as a tool
+                    sh "${mavenHome}/bin/mvn clean package"
+                }
+            }
+        }
+
+        // Add more stages as needed for deployment, testing, etc.
+    }
+}
