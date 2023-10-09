@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage('Build with Maven') {
+        stage('Build') {
             steps {
                 // Use Maven to build the project
                 script {
