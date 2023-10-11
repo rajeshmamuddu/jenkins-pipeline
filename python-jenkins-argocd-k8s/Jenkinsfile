@@ -3,15 +3,8 @@ pipeline {
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
-    }
-    
+    }    
     stages {
-        stage('Checkout'){
-           steps {
-                url: 'https://github.com/rajeshmamuddu/jenkins-pipeline/blob/main/python-jenkins-argocd-k8s/Jenkinsfile',
-           }
-        }
-
         stage('Build Docker'){
             steps{
                 script{
